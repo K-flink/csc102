@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <link rel="stylesheet" href="game.css">
+        
+    </head>
+    <body>
+        <h1>It's the Word Game!</h1>
+        <p> Click the button and guess the correct word!</p>
+        <p id="result"> </p>
+        <!-- This is used to show output -->
+        <button id="myButton" onclick="clickfunction()">Click here to start!</button>
+
+        <script> type="text/JavaScript"
+            //This javascript is used to do somehting with a button
+            function clickfunction(){
+                // this is our input
+                let str = prompt("Enter a string");//Set our variable to something here, so whenever the user types in what is set here that value becomes this variable str = string
+                let word = "Candy";
+                let result;
+                //Set condition as true and this happens
+                if(str.includes(word)){
+                    result = "Congrats! You guessed right!";
+                    
+                }
+                //Or when it doesn't meet the true condition this happens
+                else{
+                    result = "Wrong! Try again.";
+                    
+                }
+                document.getElementById("result").textContent = result;
+            }
+            //Output
+        </script>
+    </body>
+</html>
