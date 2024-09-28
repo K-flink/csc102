@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings</title>
+        <link rel="stylesheet" href="string.css">
+    </head>
+    <body>
+        <h1>Palindromes</h1>
+        <p1>Type in one below</p1>
+        <script src = "alert.js"></script>
+        <script>
+            function Palindrome(str){
+        const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,'');       
+        return cleanStr === cleanStr.split('').reverse().join('');
+    }
+    const inputString = "eye "
+    //Examples***racecar, radar, rotator, eye, dad, madam
+    if(Palindrome(inputString)){
+        alert(inputString + "this a Palindrome")
+    }
+    else{
+        alert(inputString + "this is not a Palindrome")
+    }
+        </script>
+        <p id="result"></p>
+        <button id="btn" onclick="checkPalindrome()">Click here to enter</button>
+        <script>
+            function checkPalindrome(){
+    let str = prompt("Enter a string");
+    let word = "madam";
+    let result;
+    if (str.includes(word)){
+        result = "Correct! This is a palindrome." ;
+    }
+    else {
+        result = "Wrong! This is not a palindrome.";
+    }
+    document.getElementById("result").textContent = result;
+}
+        </script>
+    </body>
+</html>
