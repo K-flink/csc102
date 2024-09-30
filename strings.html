@@ -13,7 +13,7 @@
         <input id="firstname" type="text" placeholder="First Name" />
         <input id="lastname" type="text" placeholder="Last Name" />
         <input id="zipcode" type="text" placeholder="Zip code" />
-        <button onclick ="concatenate">Click Here To Enter Name</button>
+        <button onclick ="concatenate()">Click Here To Enter Name</button>
         <script>
             //process
             //three ways to creat a variable, var, let, and const
@@ -23,15 +23,15 @@
     let firstname = document.getElementById("firstname").value;
     let lastname = document.getElementById("lastname").value;
     //alert("This is the firstname " + firstname + "and the lastname is " + lastname);
-    let zipcode = document.getElementbyId("zipcode").value;
+    let zipcode = document.getElementById("zipcode").value;
     let full_name = firstname + " " + lastname;
     document.getElementById("name").innerHTML = full_name; //always must be a value on this side of the "="
 
-    if(full_name.value.length >20){
+    if(full_name.length >20){
         alert("There are too many characters");
         return false;
     }
-    if(zipcode.value.length >9){
+    if(zipcode.length >9){
         alert("Thre should only be 9 digits");
         return false;
     }

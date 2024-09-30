@@ -12,9 +12,17 @@ P{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(236, 252, 15);
     font-weight: 300;
+    font-size: larger;
 }
 p1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(137, 15, 252);
     font-weight: 300; 
+}
+
+button{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
 }
