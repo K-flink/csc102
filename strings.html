@@ -6,35 +6,72 @@
     </head>
     <body>
         <h1>Palindromes</h1>
-        <p1>Type in one below</p1>
         <script src = "alert.js"></script>
+        <!-- Output -->
+        <p id="name"></p>
+        <!-- Input -->
+        <input id="firstname" type="text" placeholder="First Name" />
+        <input id="lastname" type="text" placeholder="Last Name" />
+        <input id="zipcode" type="text" placeholder="Zip code" />
+        <button onclick ="concatenate">Click Here To Enter Name</button>
         <script>
-            function Palindrome(str){
-        const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,'');       
-        return cleanStr === cleanStr.split('').reverse().join('');
+            //process
+            //three ways to creat a variable, var, let, and const
+            function concatenate(){
+                //Anytime you set up a variable and you want to assign it or equal something in your JavaScript, it has to be assigned to a value
+                //empty value = some value
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    //alert("This is the firstname " + firstname + "and the lastname is " + lastname);
+    let zipcode = document.getElementbyId("zipcode").value;
+    let full_name = firstname + " " + lastname;
+    document.getElementById("name").innerHTML = full_name; //always must be a value on this side of the "="
+
+    if(full_name.value.length >20){
+        alert("There are too many characters");
+        return false;
     }
-    const inputString = "eye "
-    //Examples***racecar, radar, rotator, eye, dad, madam
-    if(Palindrome(inputString)){
-        alert(inputString + "this a Palindrome")
+    if(zipcode.value.length >9){
+        alert("Thre should only be 9 digits");
+        return false;
     }
     else{
-        alert(inputString + "this is not a Palindrome")
+        alert("Hello, you managed to find me!")
+    }
+            }
+
+            function Palindrome(str){
+            //This is for putting characters to lower case and replacing them
+        const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,''); 
+        //This is for splitting, reversing, and puttting them back together to get the word spelled backwords      
+        return cleanStr === cleanStr.split('').reverse().join('');
+    }
+    const inputString = "eye"
+    //Examples***racecar, radar, rotator, eye, dad, madam
+    if(Palindrome(inputString)){
+        alert(inputString + ", " + "this a Palindrome")
+    }
+    else{
+        alert(inputString + ", " + "this is not a Palindrome")
     }
         </script>
         <p id="result"></p>
-        <button id="btn" onclick="checkPalindrome()">Click here to enter</button>
+        <button id="btn" onclick="checkPalindrome()">Click here to enter your palindrome</button>
         <script>
             function checkPalindrome(){
+        //Make a prompt fpr the user to enter a word
     let str = prompt("Enter a string");
+    //Madam is the set word
     let word = "madam";
     let result;
+    //the correct input is the if and anything else is the incorrect input
     if (str.includes(word)){
         result = "Correct! This is a palindrome." ;
     }
     else {
         result = "Wrong! This is not a palindrome.";
     }
+    //The output
     document.getElementById("result").textContent = result;
 }
         </script>
