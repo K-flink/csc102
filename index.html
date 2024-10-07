@@ -6,15 +6,25 @@
    <!-- the head section has info for the browser ans search engine -->
    <head>
      <title>CSC102 Home Page</title>
+     <!-- add link to our css file -->
+      <link rel="stylesheet" href="main.css">
+      
    </head>
 
    <!-- the body section holds the text and images that we wnat to show tot he user -->
    <body>
       <h1>Welcome to my CSC102 Home Page</h1>
       <!-- p is paragraph tag; has spacing around it by default -->
-       <p>
-         <!-- img is hte image tag -->
-         <img id="memeImage" src="harry potter meme.jpg">
-       </p>
+      <p>Use the buttons below to move the image</p>
+      <button onclick="startMove('right')">Go Right</button>
+      <button onclick="startMove('left')">Go Left</button>
+      <button onclick="startMove('up')">Go Up</button>
+      <button onclick="startMove('down')">Go Down</button>
+      <button onclick="stopMove()">Stop</button>
+       <div id="container">
+        <!-- img is the image tag -->
+        <img id="memeImage" src="harry potter meme.jpg"/>
+       </div>
+       <script src="MoveImage.js"></script>
    </body>
  </html>
