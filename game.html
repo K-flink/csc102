@@ -6,7 +6,13 @@
         
     </head>
     <body>
-        <h1>It's the Word Game!</h1>
+        <header><h1>It's the Word Game!</h1></header>
+        <h2><nav id="mynav">
+            <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/index.html">Index</a>|</button>
+            <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/boards.html">Boards</a>|</button>
+            <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/strings.html">Palindromes</a>|</button>
+            <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/table_page.html">Information Table</a>|</button>
+          </nav></h2>
         <p> Click the button and guess the correct word!</p>
         <p id="result"> </p>
         <!-- This is used to show output -->
@@ -19,6 +25,7 @@
                 let str = prompt("Enter a string");//Set our variable to something here, so whenever the user types in what is set here that value becomes this variable str = string
                 let word = "Candy";
                 let result;
+                
                 //Set condition as true and this happens
                 if(str.includes(word)){
                     result = "Congrats! You guessed right!";

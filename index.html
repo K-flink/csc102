@@ -1,10 +1,12 @@
-<!-- Kerri, 9/13/2024 -->
+<!-- Kerri, 10/12/2024 -->
  <!-- DOCTYPE this is the first tag on the page and it tells the browser that this is a HTML5 page -->
  <!DOCTYPE html> 
 <!-- the html tag goes next -->
  <html>
    <!-- the head section has info for the browser ans search engine -->
    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>CSC102 Home Page</title>
      <!-- add link to our css file -->
       <link rel="stylesheet" href="main.css">
@@ -13,7 +15,13 @@
 
    <!-- the body section holds the text and images that we wnat to show tot he user -->
    <body>
-      <h1>Welcome to my CSC102 Home Page</h1>
+      <header><h1>Welcome to my CSC102 Home Page</h1></header>
+      <h2><nav id="mynav">
+      <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/boards.html">Boards</a>|</button>
+      <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/strings.html">Strings</a>|</button>
+      <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/game.html">Word Game</a>|</button>
+      <button>|<a href="file:///C:/Users/Kerri/Documents/CSC102/Class/table_page.html">Information Table</a>|</button>
+    </nav></h2>
       <!-- p is paragraph tag; has spacing around it by default -->
       <p>Use the buttons below to move the image</p>
       <button onclick="startMove('right')">Go Right</button>
@@ -26,5 +34,11 @@
         <img id="memeImage" src="harry potter meme.jpg"/>
        </div>
        <script src="MoveImage.js"></script>
+       <footer>
+        Kerri Flink<br>
+        University of Advancing Technology<br>
+        2625 W. Baseline Road<br>
+        Tempe, AZ 85283-1056<br>
+       </footer>
    </body>
  </html>

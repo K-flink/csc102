@@ -4,33 +4,65 @@ declaration block:
 selector{
     property;
     property2;
-    property3;
 }
 */
 
 body{
+    text-align: center;
     background-color: rgb(89, 0, 255);
     color: rgb(127, 255, 234);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 nav{
-    height: 600px;
-    width: 200px;
+    height: 200px;
+    width: 2px;
     float: left;
     padding: 5px;
     line-height: 30px;
 }
 
+P{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(225, 0, 255);
+    font-weight: 300;
+}
+
 footer{
     text-align: center;
-    margin-right: 200px;
+    font-size: small;
+    font-style: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 #memeImage{
-    margin-right: 200px;
-    width: 400px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
 }
 
 h1{
     text-align: center;
+}
+
+button{
+    background-color: rgb(255, 251, 0);
+    color: rgb(0, 136, 255);
+    border-color: rgb(136, 0, 129);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: large;
+    height: 50px;
+    width: 150px;
 }
